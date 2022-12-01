@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamsGarden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Alex+Brush&family=Explora&family=Fleur+De+Leah&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <audio id="music" loop ><source src="./audio/chilled2.mp3" type="audio/mpeg"></source></audio>
+    <header>
+        <nav class="navbar navbar-expand-sm mb-0">
+            <div class="container">
+                <a style="font-family:'Fleur De Leah';font-size:48px;color:chartreuse;">Dreams Garden</a>
+                <button 
+                    id="botao-hamburguer"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    class="navbar-toggler"
+                    aria-control="navbarNav"
+                    aria-expand="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="#historia">história</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#galeria">galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#menus">menus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-center" href="#localizacao">localização & horários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-center" href="#evento-fechado">evento fechado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" style="border:1px solid gray" href="#reservas">reservas</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="audio" onclick="playAudio()" type="submit"><span class="material-symbols-outlined">
+                    volume_up</span></button>
+                <button class="audio" onclick="pauseAudio()" type="submit"><span class="material-symbols-outlined">
+                    volume_off</span></button>
+            </div>
+        </nav> 
+    </header>
+    <section id="eventos" class="pt-3">
+        <div class="container">
+            <h1 class="text-center">Próximos Eventos</h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <article class="card text-bg-dark">
+                        <img class="rounded border" src="./images/eventos/evento7.jpg"/>
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Reveillon 2023</h4>
+                            <h5 class="card-subtitle">31/12 a partir de 20h00</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima dolorum at veniam, ipsum a molestias.
+                            </p>
+                            <a href="#" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <article class="card text-bg-dark">
+                        <img class="rounded border" src="./images/eventos/evento5.jpg"/>
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Festa a Fantasia</h4>
+                            <h5 class="card-subtitle">06/1/2023 a partir de 20h00</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima dolorum at veniam, ipsum a molestias.
+                            </p>
+                            <a href="#" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <article class="card text-bg-dark">
+                        <img class="rounded border" src="./images/eventos/evento4.jpg"/>
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Carnaval 2023</h4>
+                            <h5 class="card-subtitle">28/2/2023 a partir de 20h00</h5>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima dolorum at veniam, ipsum a molestias.
+                            </p>
+                            <a href="#" class="btn btn-primary">Reservar</a>
+                        </div>
+                    </article>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="historia" class="pt-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <img class="shadow-sm p-3 mb-5 bg-white rounded" onload="playAudio()" src="./images/predio.jpg" style="width: 100%">
+                </div>
+                <div class="col auto">
+                    <div class="row">
+                        <h1>Conheça a história do local...</h1>
+                    </div>
+                    <div class="row" style="font-family: 'Satisfy'; font-size:24px">
+                        Nossa história começa em 1953 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi impedit libero officia itaque ducimus corrupti, vel suscipit voluptates deleniti illum tempora placeat expedita labore provident maxime ipsam hic, dicta animi?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="galeria" class="pt-5">
+        <div class="container pt-5">
+            <h1 class="text-center">Galeria</h1>
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img class="rounded" src="./images/slides/slide5.jpg" alt="Foto do espaço interno do restaurante">
+                        <div class="carousel-caption">
+                            <h2>Área externa</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img class="rounded" src="./images/slides/slide1.jpg" alt="Duas taças de vinho">
+                        <div class="carousel-caption">
+                            <h2>Drinks</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img class="rounded" src="./images/slides/slide2.jpg" alt="Duas taças de vinho">
+                        <div class="carousel-caption">
+                            <h2>Bar</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img class="rounded" src="./images/slides/slide4.jpg" alt="Duas taças de vinho">
+                        <div class="carousel-caption">
+                            <h2>Lounge</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img class="rounded" src="./images/slides/slide8.jpg" alt="Uma mesa com comida">
+                        <div class="carousel-caption">
+                            <h2>Cozinha</h2>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menus" class="pt-5">
+        <h1 class="text-center pb-3" style="color:black;font-weight:bolder;">Menus</h1>
+        <div class="container rounded" id="cardapio">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item active">
+                    <a href="#cozinha" class="nav-link" data-bs-toggle="tab">Cozinha</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#doces" class="nav-link" data-bs-toggle="tab">Doces</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cocktails" class="nav-link" data-bs-toggle="tab">Cocktails</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#vinhos" class="nav-link" data-bs-toggle="tab">Carta de Vinhos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cervejas" class="nav-link" data-bs-toggle="tab">Cervejas</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="cozinha">
+                    <p class="text-center mt-2 mb-0"><strong>Filet au Poivret -$ 89,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 mb-0"><strong>File au Poivret - $ 99,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 mb-0"><strong>File au Poivret - $ 59,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 mb-0"><strong>File au Poivret - $ 59,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="doces">
+                    <p class="text-center mt-2 mb-0"><strong>Tiramissu - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 mb-0"><strong>Creme Brulliet - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="cocktails">
+                    <p class="text-center mt-2 mb-0"><strong>Moscow Mule - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 mb-0"><strong>Margharita - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="vinhos">
+                    <p class="text-center mt-2 mb-0"><strong>Chateau du Vin - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 mb-0"><strong>Sangue de Boi - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="cervejas">
+                    <p class="text-center mt-2 mb-0"><strong>Stella Artois - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 mb-0"><strong>Colorado Apia - $ 19,80</strong></p>
+                    <div class="row justify-content-center border-0">
+                        <div class="col-md-6">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet fugiat culpa enim, saepe esse dolore aperiam repellat placeat sapiente, nesciunt quo labore sequi omnis tempora distinctio similique rem ipsam.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="localizacao" class="pt-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <h1 class="text-center">Localização e horários</h1>
+                    </div>
+                    <div class="row text-center mt-3" style="font-family: 'Satisfy'; font-size:24px">
+                        <p>Quarta a Sexta: 18h - 24h00</p>
+                        <p>Sabádo: 12h - 24h00</p>
+                        <p>Domingo: 12h - 22h00</p>
+                    </div>
+                    <div class="row text-center mt-5" style="font-family: 'Satisfy'; font-size:24px">
+                        <p><strong>Rua São Bento, 999 - São Paulo, SP</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <iframe class="google-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.636010169025!2d-46.637201549201954!3d-23.545590584615663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5854575bec47%3A0xcff6dbd0a9dd6bac!2sMartinelli%20Building!5e0!3m2!1sen!2sbr!4v1669732476688!5m2!1sen!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="evento-fechado" class="pt-5">
+        <div class="container pt-5">
+            <div class="row">
+                <h1 class="text-center" style="color:black;font-weight:bolder;">Solicitação de Evento Fechado</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 mb-5">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label fw-bold">Seu nome</label>
+                            <input type="text" id="nome" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Seu email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label fw-bold">Seu telefone (opcional)</label>
+                            <input type="tel" id="telefone" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label fw-bold">Descrição do Evento</label>
+                            <textarea class="form-control" id="mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reservas" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center" style="color:black;font-weight:bolder;">Faça sua reserva</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 mb-5">
+                    <form>
+                        <div class="mb-3">
+                            <label for="sel1" class="fw-bold">Quantidade de Pessoas</label>
+                            <select class="form-control" id="sel1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8 ou mais</option>
+                            </select>
+                        </div>
+                        <div class="md-form md-outline input-with-post-icon datepicker mb-3">
+                            <label for="example" class="fw-bold">Data desejada</label>
+                            <input placeholder="Select date" type="date" id="example" class="form-control">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="sel2" class="fw-bold">Horário</label>
+                            <select class="form-control" id="sel2">
+                                <option>18:00</option>
+                                <option>18:30</option>
+                                <option>19:00</option>
+                                <option>19:30</option>
+                                <option>20:00</option>
+                                <option>20:30</option>
+                                <option>21:00</option>
+                                <option>21:30</option>
+                                <option>22:00</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-white fixed-bottom" style="background-image: linear-gradient(#e3e9e9, #0a1b27);">
+        <div class="row text-center text-md-start pt-2">
+            <ul class="list-unstyled d-flex justify-content-center justify-content-me-start">
+                <li><a href="#"><i class="bi bi-facebook me-5"></i></a></li>
+                <li><a href="#"><i class="bi bi-instagram me-5"></i></a></li>
+                <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
